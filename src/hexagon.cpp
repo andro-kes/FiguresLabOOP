@@ -29,8 +29,7 @@ Hexagon::operator double() const {
     double area = 0.0;
     for (int i = 0; i < 6; i++) {
         int j = (i + 1) % 6;
-        area += this->coords[2 * i] * this->coords[2 * j + 1] - 
-                this->coords[2 * j] * this->coords[2 * i + 1];
+        area += this->coords[2 * i] * this->coords[2 * j + 1] - this->coords[2 * j] * this->coords[2 * i + 1];
     }
     return std::abs(area) / 2.0;
 }
